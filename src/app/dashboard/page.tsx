@@ -193,9 +193,9 @@ const UserTable = () => {
         </div>
       ) : null}
 
-      <div className="flex ">
+      <div className="overflow-y-auto w-full">
         {filteredUsers.length != 0 ? (
-          <table className=" shadow-xl border-b min-w-full">
+          <table className="rounded min-w-full shadow-xl border-b min-w-full">
             <thead className="bg-gray-50">
               <tr>
                 <th className="text-left px-6 py-3 whitespace-nowrap text-sm text-gray-500">
@@ -225,7 +225,7 @@ const UserTable = () => {
                 .map((user) => (
                   <tr
                     key={user.id}
-                    className={`hover:bg-gray-50  ${
+                    className={`border-[1px] hover:bg-gray-50  ${
                       selectedUsers.includes(user.id) ? "bg-gray-100" : ""
                     }`}
                   >
@@ -335,6 +335,7 @@ const UserTable = () => {
           <div className="p-4 ">No records left</div>
         )}
       </div>
+
       <span className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
         Page {currentPage} of {totalPages}
       </span>
