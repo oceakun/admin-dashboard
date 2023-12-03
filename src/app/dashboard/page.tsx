@@ -335,7 +335,9 @@ const UserTable = () => {
           <div className="p-4 ">No records left</div>
         )}
       </div>
-
+      <span className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+        Page {currentPage} of {totalPages}
+      </span>
       {totalPages > 1 && (
         <Paginator
           currentPage={currentPage}
